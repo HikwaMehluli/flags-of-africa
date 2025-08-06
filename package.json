@@ -1,0 +1,11 @@
+{
+  "name": "flags-of-africa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Hikwa Mehluli",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
