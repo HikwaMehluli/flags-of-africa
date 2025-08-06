@@ -2,7 +2,7 @@
    Global Styles & Variables
    ========================================================================== */
 :root {
-    /* Black & White Palette */
+    /* Black & White */
     --primary-color: white;
     --secondary-color: #212121;
 
@@ -69,13 +69,18 @@ body {
 
 .slider:before {
     position: absolute;
-    content: "";
+    content: "☀️";
     height: 26px;
     width: 26px;
     left: 4px;
     bottom: 4px;
     background-color: var(--primary-color);
+    color: var(--secondary-color);
     transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 input:checked+.slider {
@@ -87,6 +92,7 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
+    content: "🌙";
     transform: translateX(26px);
 }
 
