@@ -11,7 +11,7 @@
     --tertiary-color: #edf6f9; */
     
     /* Brown*/
-    --primary-color: #612e04;
+    --primary-color: #6b3305;
     --secondary-color: #a47c18;
     --tertiary-color: #c0bf8d;
     
@@ -26,7 +26,7 @@ body {
     margin: 0;
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffeedc;
+    background-color: var(--primary-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -303,7 +303,7 @@ body {
     }
 
     .card {
-        font-size: 1.5em;
+        font-size: 5em;
         min-height: 60px;
     }
 
