@@ -45,7 +45,16 @@
             <h1 class="game-title">Flags of Africa</h1>
             <p class="game-description">Test your memory and learn about African flags! 🌍</p>
 
-            <div class="selectors-container">
+            <div class="theme-switcher">
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="selectors-container">
                 <div class="selector-group">
                     <div class="selector-title">Select Difficulty</div>
                     <select class="game-select" id="difficulty-select" aria-label="Select Difficulty">
@@ -97,5 +106,6 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/tippy-bundle.umd.min.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/theme.js"></script>
 </body>
 </html>
