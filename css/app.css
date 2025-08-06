@@ -2,17 +2,17 @@
    Global Styles & Variables
    ========================================================================== */
 :root {
-    /* Black & White */
-    --primary-color: white;
-    --secondary-color: #212121;
+    /* Blue & Gray */
+    --primary-color: #e6e3f4;
+    --secondary-color: #070024;
 
     /* Other Varibales */
-    --transition: all 0.3s ease-in-out;
+    --transition: all 0.5s ease-in-out;
 }
 
 .dark-mode {
-    --primary-color: #212121;
-    --secondary-color: white;
+    --primary-color: #070024;
+    --secondary-color: #e6e3f4;
 }
 
 body {
