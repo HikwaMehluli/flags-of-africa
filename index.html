@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flags of Africa | Own Your Narrative - Africa</title>
+
+    <meta name="description"
+        content="This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the 54 nations that make up the African continent. Get ready to challenge your memory, learn some geography, and have a blast doing it!">
+    <meta name="author" content="HikwaMehluli">
+    <meta name="keywords"
+        content="Memory game, African Flags, Educational, African geography, Flags of Africa, Geography game, Learn flags, African countries, Interactive learning, Fun game, Flag icons, Africa">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Flags of Africa | Own Your Narrative - Africa">
+    <meta property="og:description"
+        content="This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the 54 nations that make up the African continent. Get ready to challenge your memory, learn some geography, and have a blast doing it!">
+    <meta property="og:image" content="https://yourdomain.com/path-to-image.jpg"><!-- TODO: Replace with actual image 1200 x 630px URL -->
+    <meta property="og:url" content="https://yourdomain.com/flags-of-africa"> <!-- TODO: Replace with actual page URL -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flags of Africa | Own Your Narrative - Africa">
+    <meta name="twitter:description"
+        content="This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the 54 nations that make up the African continent. Get ready to challenge your memory, learn some geography, and have a blast doing it!">
+    <meta name="twitter:image" content="https://yourdomain.com/path-to-image.jpg"><!-- TODO: Replace with actual image 1200 x 630px URL -->
+    <meta name="twitter:site" content="@HikwaMehluli">
+    <meta name="twitter:creator" content="@HikwaMehluli">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/flag-icons.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <main class="game-container">
+        <div class="theme-switcher">
+            <div class="switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <section class="game-header">
+            <h1 class="game-title">Flags of Africa</h1>
+            <p class="game-description">Test your memory and learn about African flags! 🌍</p>
+
+            <div class="selectors-container">
+                <div class="selector-group">
+                    <div class="selector-title">Select Difficulty</div>
+                    <select class="game-select" id="difficulty-select" aria-label="Select Difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <div class="selector-group">
+                    <div class="selector-title">African Region</div>
+                    <select class="game-select" id="region-select" aria-label="African Region">
+                        <option value="southern">Southern Africa</option>
+                        <option value="north">North Africa</option>
+                        <option value="east">East Africa</option>
+                        <option value="west">West Africa</option>
+                        <option value="central">Central Africa</option>
+                        <option value="entire">Entire Africa</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-stats">
+            <div class="stat">
+                <div>Moves</div>
+                <div id="moves">0</div>
+            </div>
+            <div class="stat">
+                <div>Time</div>
+                <div id="time">00:00</div>
+            </div>
+        </section>
+
+        <section class="win-message" id="win-message">
+            🎉 Congratulations! You won in <span id="final-moves">0</span> moves and <span id="final-time">00:00</span>!
+        </section>
+
+        <section class="game-board" id="game-board">
+            <!-- Loads Board Game-->
+        </section>
+
+        <section class="game-controls">
+            <button class="new-game-btn" id="new-game-btn">New Game</button>
+            <button class="new-game-btn" id="restart-btn">Restart</button>
+        </section>
+    </main>
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/tippy-bundle.umd.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+</html>
