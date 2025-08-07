@@ -1,3 +1,6 @@
+
+// TODO: Bundle JS files.
+
 const path = require('path');
 
 const commonOutputPath = path.resolve(__dirname, 'js');

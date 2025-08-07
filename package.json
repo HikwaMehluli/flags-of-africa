@@ -5,8 +5,6 @@
   "author": "Hikwa Mehluli",
   "scripts": {
     "css-build": "sass --no-source-map --watch scss/_entry.scss:css/app.css --style compressed",
-    "css-map": "sass --no-source-map --watch scss/_map.scss:css/map.css --style compressed",
-    "build:map": "webpack --watch --config-name map",
     "build:app": "webpack --watch --config-name app"
   },
   "devDependencies": {
