@@ -10,11 +10,11 @@
     padding: 20px;
     margin-bottom: 20px;
     transition: var(--transition);
-}
 
-.win-message.show {
-    display: block;
-    animation: slideIn 0.5s ease forwards;
+    &.show {
+        display: block;
+        animation: slideIn 0.5s ease forwards;
+    }
 }
 
 @keyframes slideIn {

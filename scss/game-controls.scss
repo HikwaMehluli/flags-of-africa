@@ -18,11 +18,11 @@
     cursor: pointer;
     transition: var(--transition);
     width: 100%;
-}
 
-.new-game-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    &:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 }
