@@ -5,11 +5,14 @@
   "author": "Hikwa Mehluli",
   "scripts": {
     "css-build": "sass --no-source-map --watch scss/_entry.scss:css/app.css --style compressed",
-    "build:app": "webpack --watch --config-name app"
+    "js-build": "webpack --watch --config-name app"
   },
   "devDependencies": {
     "sass": "^1.90.0",
     "webpack": "^5.101.0",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
   }
 }
