@@ -6,7 +6,7 @@
 
 Have you ever noticed the lack of fun, interactive, and educational content about Africa? This project was born out of a desire to change that! We believe in making learning about Africa's rich and diverse cultures an engaging experience for everyone.
 
-This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the [55 African Nations](#countries-included). Get ready to challenge your memory, learn some geography, and have a blast doing it!
+This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the 55 African Nations. Get ready to challenge your memory, learn some geography, and have a blast doing it!
 
 ## ✨ Features & Tech Stack
 
