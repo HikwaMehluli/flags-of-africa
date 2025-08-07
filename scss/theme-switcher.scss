@@ -5,70 +5,29 @@
     position: absolute;
     top: 0;
     right: 0;
-}
+    
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
 
-.switch-container {
-    display: flex;
-    align-items: center;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-
-    input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+        .icon {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    transition: .4s;
-
-    &:before {
-        position: absolute;
-        content: "☀️";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        transition: .4s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-    }
+.theme-switcher .icon {
+    background-image: url('../icons/svg/light-mode.svg');
+    filter: invert(0);
 }
 
-input:checked+.slider {
-    background-color: var(--secondary-color);
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px var(--secondary-color);
-}
-
-input:checked+.slider:before {
-    content: "🌙";
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-
-    &:before {
-        border-radius: 50%;
-    }
+.dark-mode .theme-switcher .icon {
+    background-image: url('../icons/svg/dark-mode.svg');
+    filter: invert(1);
 }

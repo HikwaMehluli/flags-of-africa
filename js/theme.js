@@ -6,31 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             body.classList.add('dark-mode');
-            themeToggle.checked = true;
         } else {
             body.classList.remove('dark-mode');
-            themeToggle.checked = false;
         }
     };
 
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if (savedTheme) {
         applyTheme(savedTheme);
     } else {
+        // Default to light mode if no saved theme
         applyTheme('light');
     }
 
-    // Save theme preference on toggle
-    themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            body.classList.remove('dark-mode');
+    // Save theme preference on click
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            applyTheme('light');
             localStorage.setItem('theme', 'light');
+        } else {
+            applyTheme('dark');
+            localStorage.setItem('theme', 'dark');
         }
     });
 });
