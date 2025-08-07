@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Win Message
+   ========================================================================== */
+.win-message {
+    display: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.win-message.show {
+    display: block;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 600px) {
+    .game-header {
+        text-align: left;
+    }
+
+    .selectors-container {
+        gap: 15px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .game-controls {
+        gap: 10px;
+    }
+
+    .card {
+        font-size: 5em;
+        min-height: 60px;
+    }
+
+    .game-title {
+        font-size: 2em;
+    }
+
+    .flag-icon {
+        width: 30px;
+        height: 22px;
+    }
+}

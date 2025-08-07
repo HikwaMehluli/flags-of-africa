@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Hikwa Mehluli",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-build": "sass --no-source-map --watch scss/_entry.scss:css/app.css --style compressed",
+    "css-map": "sass --no-source-map --watch scss/_map.scss:css/map.css --style compressed",
+    "build:map": "webpack --watch --config-name map",
+    "build:app": "webpack --watch --config-name app"
   },
   "devDependencies": {
     "sass": "^1.90.0",
