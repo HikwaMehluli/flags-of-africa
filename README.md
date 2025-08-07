@@ -1,5 +1,7 @@
 # 🌍 Flags of Africa Memory Game 🌍
 
+![Flags of Africa Memory Game Screenshot](./img/seo-image.jpg)
+
 ## An exciting and educational journey into the heart of Africa!
 
 Have you ever noticed the lack of fun, interactive, and educational content about Africa? This project was born out of a desire to change that! We believe in making learning about Africa's rich and diverse cultures an engaging experience for everyone.
