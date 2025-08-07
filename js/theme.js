@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (savedTheme) {
         applyTheme(savedTheme);
-    } else if (prefersDarkMode) {
-        applyTheme('dark');
+    } else {
+        applyTheme('light');
     }
 
     // Save theme preference on toggle
