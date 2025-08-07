@@ -10,6 +10,13 @@
 .dark-mode {
     --primary-color: #070024;
     --secondary-color: #e6e3f4;
+
+    .win-message {
+        display: none;
+        background-color: green;
+        // background-color: var(--secondary-color);
+        color: var(--secondary-color);;
+    }
 }
 
 body {

@@ -18,7 +18,7 @@ class FlagsOfAfrica {
 
         // Game Settings (from selectors)
         this.difficulty = 'easy';
-        this.region = 'southern'; // Default region
+        this.region = 'entire'; // Default region - "southern", 'north", "east", "west", "central", "entire = (all Africa)"
 
         // Setup game
         this.initializeSelectors();
