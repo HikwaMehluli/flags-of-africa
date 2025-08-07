@@ -1,19 +1,17 @@
 :root {
     /* Blue & Gray */
-    --primary-color: #d8d5e4;
-    --secondary-color: #060119;
+    --primary-color: #efedf5;
+    --secondary-color: #080124;
 
     /* Other Varibales */
     --transition: all 0.5s ease-in-out;
 }
 
 .dark-mode {
-    --primary-color: #130d2c;
-    --secondary-color: #d8d5e4;
+    --primary-color: #080124;
+    --secondary-color: #efedf5;
 
     .win-message {
-        display: none;
-        background-color: green;
         color: var(--secondary-color);
     }
 }
@@ -28,4 +26,23 @@ body {
     margin: 0;
     padding: 20px;
     transition: var(--transition);
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+
+    a {
+        color: var(--secondary-color);
+        position: relative;
+        text-decoration: underline;
+        transition: var(--transition);
+
+        &:hover {
+            // transform: translateY(-2px);
+            opacity: .7;
+        }  
+    }
 }
