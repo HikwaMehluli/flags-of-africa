@@ -2,6 +2,12 @@
    Media Queries
    ========================================================================== */
 @media (max-width: 600px) {
+    .game-container {
+        padding: 0 20px 20px 20px;
+        box-shadow: none;
+        border: none;
+    }
+
     .game-header {
         text-align: left;
     }
