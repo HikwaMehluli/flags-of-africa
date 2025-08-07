@@ -42,6 +42,11 @@ class FlagsOfAfrica {
         });
         newGameBtn.addEventListener('click', () => this.startNewGame());
         restartBtn.addEventListener('click', () => this.restartGame());
+
+        const closeWinMessage = document.getElementById('close-win-message');
+        closeWinMessage.addEventListener('click', () => {
+            this.winMessage.classList.remove('show');
+        });
     }
 
     // Get list of flags based on selected region
@@ -225,12 +230,7 @@ class FlagsOfAfrica {
         // Update and show win message
         document.getElementById('final-moves').textContent = this.moves;
         document.getElementById('final-time').textContent = finalTime;
-        this.winMessage.classList.add('show');
-
-        // Hide win message after 5s delay
-        setTimeout(() => {
-            this.winMessage.classList.remove('show');
-        }, 5000);
+        this.winMessage.classList.add('show');   
     }
 
     // Reset game state variables and UI elements
