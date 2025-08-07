@@ -18,7 +18,7 @@ This memory game is more than just a game; it's an adventure that will test your
 ## 📚 Libraries & Frameworks
 
 -   🚩 **Flag Icons:** A fantastic collection of SVG flags from [Flag Icons](https://flagicons.lipis.dev/).
--   💡 **Tippy.js:** For beautiful and accessible tooltips.
+-   💡 **Tippy.js:** For beautiful and accessible tooltips. [Tippy.JS](https://atomiks.github.io/tippyjs)
 
 ### 💻 Development Dependencies
 
