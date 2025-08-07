@@ -2,9 +2,9 @@
    Media Queries
    ========================================================================== */
 @media (max-width: 600px) {
-    // .game-header {
-    //     text-align: left;
-    // }
+    .game-header {
+        text-align: left;
+    }
 
     .selectors-container {
         gap: 15px;
