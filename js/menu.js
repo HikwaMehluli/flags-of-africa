@@ -1,16 +1,28 @@
-const menuIcon = document.getElementById('menu-icon');
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
-const gameContainer = document.querySelector('.game-container');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const gameContainer = document.querySelector('.game-container');
 
-menuIcon.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('open');
-    gameContainer.classList.toggle('blur');
-});
+    if (menuIcon) {
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.toggle('open');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+            if (gameContainer) {
+                gameContainer.classList.toggle('blur');
+            }
+        });
+    }
 
-overlay.addEventListener('click', () => {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
-    gameContainer.classList.remove('blur');
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            menuIcon.classList.remove('open');
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+            if (gameContainer) {
+                gameContainer.classList.remove('blur');
+            }
+        });
+    }
 });

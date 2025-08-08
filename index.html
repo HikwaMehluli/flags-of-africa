@@ -49,16 +49,27 @@
 </head>
 
 <body>
-    <div class="menu-icon" id="menu-icon">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-    </div>
+    
+    <header>
+        <div class="menu-icon" id="menu-icon"><span class="menu-text">MENU</span></div>
+        <div class="theme-switcher" title="Toggle Theme" data-tippy-content="Toggle Theme" data-tippy-placement="top">
+            <button id="theme-toggle">
+                <span class="icon"></span>
+            </button>
+        </div>
+    </header>
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+                <a class="active" href="#">Game</a>
+            </li>
+            <li data-tippy-content="Coming soon" data-tippy-placement="right">
+                <a href="#">Scores</a>
+            </li>
+            <li>
+                <a href="https://thatafro.netlify.app/" target="_blank" rel="noopener noreferrer">Contact Developer</a>
+            </li>
         </ul>
     </div>
 
@@ -66,11 +77,6 @@
 
     <main class="game-container">
         <section class="game-header">
-            <div class="theme-switcher" title="Toggle Theme" data-tippy-content="Toggle Theme" data-tippy-placement="top">
-                <button id="theme-toggle">
-                    <span class="icon"></span>
-                </button>
-            </div>
 
             <h1 class="game-title">Flags of Africa</h1>
             <p class="game-description">Challenge your memory, learn some geography, and have a blast doing it!</p>
@@ -126,7 +132,10 @@
 
         <footer>
             <p>
-                Created by <a href="https://github.com/HikwaMehluli" target="_blank" rel="noopener noreferrer">Hikwa Mehluli</a>
+                Created by <a href="https://thatafro.netlify.app/" target="_blank" rel="noopener noreferrer">thatAfro</a>
+            </p>
+            <p>
+                <a href="https://github.com/HikwaMehluli" target="_blank" rel="noopener noreferrer">GitHub</a>
             </p>
             <p>
                 © <script>document.write(new Date().getFullYear());</script> Flags of Africa. All rights reserved.
