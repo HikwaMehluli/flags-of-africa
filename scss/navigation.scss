@@ -17,6 +17,7 @@ header {
     align-items: center;
     justify-content: center;
     position: relative; /* Ensure pseudo-elements are positioned relative to this */
+    transition: var(--transition);
 
     .menu-text {
         color: var(--secondary-color);
@@ -30,6 +31,7 @@ header {
         transform: translate(-50%, -50%); /* Adjust for its own size */
         line-height: 1;
         white-space: nowrap; /* Prevent text from wrapping */
+        transition: var(--transition);
     }
 
     &:before,
@@ -65,6 +67,20 @@ header {
             background-color: var(--secondary-color);
             bottom: 50%;
             transform: translateY(50%) rotate(-45deg);
+        }
+    }
+
+    // Over Effect
+    &:hover {
+        background-color: var(--secondary-color);
+
+        .menu-text {
+            color: var(--primary-color);
+        }
+
+        &:before,
+        &:after {
+            background-color: var(--primary-color);
         }
     }
 }
@@ -114,7 +130,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1px);
     display: none;
     z-index: 998;
