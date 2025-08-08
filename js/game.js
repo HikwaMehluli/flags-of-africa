@@ -15,6 +15,7 @@ class FlagsOfAfrica {
         this.movesElement = document.getElementById('moves');
         this.timeElement = document.getElementById('time');
         this.winMessage = document.getElementById('win-message');
+        this.confettiElement = document.querySelector('.confetti');
 
         // Game Settings (from selectors)
         this.difficulty = 'easy';
@@ -46,6 +47,9 @@ class FlagsOfAfrica {
         const closeWinMessage = document.getElementById('close-win-message');
         closeWinMessage.addEventListener('click', () => {
             this.winMessage.classList.remove('show');
+            if (this.confettiElement) {
+                this.confettiElement.classList.remove('show');
+            }
         });
     }
 
@@ -230,7 +234,10 @@ class FlagsOfAfrica {
         // Update and show win message
         document.getElementById('final-moves').textContent = this.moves;
         document.getElementById('final-time').textContent = finalTime;
-        this.winMessage.classList.add('show');   
+        this.winMessage.classList.add('show');
+        if (this.confettiElement) {
+            this.confettiElement.classList.add('show');
+        }
     }
 
     // Reset game state variables and UI elements
@@ -246,6 +253,9 @@ class FlagsOfAfrica {
         this.timeElement.textContent = '00:00';
 
         this.winMessage.classList.remove('show'); // Hide win message
+        if (this.confettiElement) {
+            this.confettiElement.classList.remove('show');
+        }
     }
 
     // Start a completely new game (reset + create new board)

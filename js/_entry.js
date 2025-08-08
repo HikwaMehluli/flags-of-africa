@@ -1,3 +1,3 @@
-import "./menu.js";
+import "./navigation.js";
 import "./game.js";
 import "./theme.js";
