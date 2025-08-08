@@ -1,6 +1,6 @@
 :root {
     /* Blue & Gray */
-    --primary-color: #efedf5;
+    --primary-color: #e8e5f2;
     --secondary-color: #080124;
 
     /* Other Varibales */
@@ -9,7 +9,7 @@
 
 .dark-mode {
     --primary-color: #080124;
-    --secondary-color: #efedf5;
+    --secondary-color: #e8e5f2;
 
     .win-message {
         color: var(--secondary-color);

@@ -3,6 +3,7 @@ header {
     justify-content: space-between;
     padding: 1rem 0;
     width: 100%;
+    // z-index: 997;
 }
 
 .menu-icon {
@@ -131,6 +132,7 @@ header {
    Theme Switcher
    ========================================================================== */
 .theme-switcher {
+    z-index: 1000;
     
     button {
         background-color: transparent;
