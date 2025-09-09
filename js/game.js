@@ -14,7 +14,6 @@ class FlagsOfAfrica {
         this.gameBoard = document.getElementById('game-board');
         this.movesElement = document.getElementById('moves');
         this.timeElement = document.getElementById('time');
-        this.winMessage = document.getElementById('win-message');
         this.confettiElement = document.querySelector('.confetti');
 
         // --- Modal UI Elements ---
@@ -51,14 +50,6 @@ class FlagsOfAfrica {
         });
         newGameBtn.addEventListener('click', () => this.startNewGame());
         restartBtn.addEventListener('click', () => this.restartGame());
-
-        const closeWinMessage = document.getElementById('close-win-message');
-        closeWinMessage.addEventListener('click', () => {
-            this.winMessage.classList.remove('show');
-            if (this.confettiElement) {
-                this.confettiElement.classList.remove('show');
-            }
-        });
 
         if (this.nameForm) {
             this.nameForm.addEventListener('submit', (e) => {
@@ -272,7 +263,7 @@ class FlagsOfAfrica {
         if (this.nameModal) {
             this.modalFinalMoves.textContent = this.moves;
             this.modalFinalTime.textContent = finalTime;
-            this.nameModal.style.display = 'flex';
+            this.nameModal.style.display = 'block';
         }
     }
 
@@ -299,7 +290,6 @@ class FlagsOfAfrica {
         this.movesElement.textContent = '0';
         this.timeElement.textContent = '00:00';
 
-        this.winMessage.classList.remove('show'); // Hide win message
         if (this.confettiElement) {
             this.confettiElement.classList.remove('show');
         }

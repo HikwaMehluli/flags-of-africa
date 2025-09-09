@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuIcon.classList.toggle('open');
             sidebar.classList.toggle('open');
             overlay.classList.toggle('open');
-            if (gameContainer) {
-                gameContainer.classList.toggle('blur');
-            }
+            
         });
     }
 
