@@ -10,7 +10,7 @@ This memory game is more than just a game; it's an adventure that will test your
 
 ## ✨ Features & Tech Stack
 
--   🎮 **Interactive Gameplay:** A classic memory game with a modern twist.
+-   🎮 **Interactive Gameplay:** A classic memory game with a modern twist. 3 difficulty levels. Top 10 Scores.
 -   🌐 **HTML5 & CSS3:** No bloated ~~CSS Frameworks~~ this is purely custom built with the latest web standards for a smooth and responsive experience.
 -   💻 **JavaScript:** Powers the game's logic and interactivity.
 -   🗂️ **JSON:** Manages the flag and country data for easy updates.
