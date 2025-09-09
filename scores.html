@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DH8L3Z163V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DH8L3Z163V');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>High Scores | Flags of Africa</title>
+
+    <meta name="description" content="Check out the high scores for the Flags of Africa memory game.">
+    <meta name="author" content="HikwaMehluli">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/flag-icons.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-icon" id="menu-icon"><span class="menu-text">MENU</span></div>
+        <div class="theme-switcher" title="Toggle Theme">
+            <button id="theme-toggle">
+                <span class="icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li>
+                <a href="index.html">Game</a>
+            </li>
+            <li>
+                <a class="active" href="scores.html">Scores</a>
+            </li>
+            <li>
+                <a href="https://thatafro.netlify.app/" target="_blank" rel="noopener noreferrer">Contact Developer</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="game-container">
+        <section class="game-header">
+            <h1 class="game-title">High Scores</h1>
+            <p class="game-description">Top 5 scores. Can you beat them?</p>
+        </section>
+
+        <section class="scores-container">
+            <ol id="high-scores-list"></ol>
+            <div id="no-scores-container" style="display: none;">
+                <p>No scores yet. Play a game to see your score here!</p>
+                <a href="index.html" class="btn-play-game">Play Now</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Created by <a href="https://thatafro.netlify.app/" target="_blank" rel="noopener noreferrer">thatAfro</a> | 
+                <a href="http://instagram.com/thatafro" target="_blank" rel="noopener noreferrer">@thatafro</a> | 
+                <a href="https://github.com/HikwaMehluli" target="_blank" rel="noopener noreferrer">@HikwaMehluli</a>
+            </p>
+            <p>
+                © <script>document.write(new Date().getFullYear());</script> Flags of Africa. All rights reserved.
+            </p>
+        </footer>
+    </main>
+
+        <script src="./js/popper.js"></script>
+    <script src="./js/tippy.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

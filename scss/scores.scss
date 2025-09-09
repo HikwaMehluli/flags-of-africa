@@ -1,0 +1,65 @@
+/* Styles for the scores page */
+.scores-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+#high-scores-list {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 15px 10px;
+        border-bottom: 1px solid var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .player-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .score-details {
+            font-size: 1rem;
+        }
+
+        .game-level {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-transform: capitalize;
+        }
+    }
+}
+
+#no-scores-container {
+    text-align: center;
+    padding: 40px 20px;
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-play-game {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+

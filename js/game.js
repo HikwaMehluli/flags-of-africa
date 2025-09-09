@@ -17,6 +17,14 @@ class FlagsOfAfrica {
         this.winMessage = document.getElementById('win-message');
         this.confettiElement = document.querySelector('.confetti');
 
+        // --- Modal UI Elements ---
+        this.nameModal = document.getElementById('name-modal');
+        this.nameForm = document.getElementById('name-form');
+        this.playerNameInput = document.getElementById('player-name');
+        this.modalFinalMoves = document.getElementById('modal-final-moves');
+        this.modalFinalTime = document.getElementById('modal-final-time');
+        this.closeModalButton = document.querySelector('.close-modal');
+
         // Game Settings (from selectors)
         this.difficulty = 'easy';
         this.region = 'entire'; // Default region - "southern", 'north", "east", "west", "central", "entire = (all Africa)"
@@ -51,6 +59,32 @@ class FlagsOfAfrica {
                 this.confettiElement.classList.remove('show');
             }
         });
+
+        if (this.nameForm) {
+            this.nameForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const playerName = this.playerNameInput.value.trim();
+                if (playerName) {
+                    this.saveScore(playerName, this.moves, this.timeElement.textContent, this.difficulty, this.region);
+                    this.nameModal.style.display = 'none';
+                    this.playerNameInput.value = '';
+                }
+            });
+        }
+
+        if (this.closeModalButton) {
+            this.closeModalButton.addEventListener('click', () => {
+                this.nameModal.style.display = 'none';
+            });
+        }
+
+        if (this.nameModal) {
+            this.nameModal.addEventListener('click', (event) => {
+                if (event.target === this.nameModal) {
+                    this.nameModal.style.display = 'none';
+                }
+            });
+        }
     }
 
     // Get list of flags based on selected region
@@ -213,7 +247,7 @@ class FlagsOfAfrica {
             const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
             const minutes = Math.floor(elapsed / 60).toString().padStart(2, '0');
             const seconds = (elapsed % 60).toString().padStart(2, '0');
-            this.timeElement.textContent = `${minutes}:${seconds}`; // Update UI
+            this.timeElement.textContent = `${minutes}:${seconds}`;
         }, 1000);
     }
 
@@ -228,16 +262,29 @@ class FlagsOfAfrica {
     // --- Game Flow ---
     // Handle game win condition
     gameWon() {
-        this.stopTimer(); // Stop the timer
+        this.stopTimer();
         const finalTime = this.timeElement.textContent;
 
-        // Update and show win message
-        document.getElementById('final-moves').textContent = this.moves;
-        document.getElementById('final-time').textContent = finalTime;
-        this.winMessage.classList.add('show');
         if (this.confettiElement) {
             this.confettiElement.classList.add('show');
         }
+
+        if (this.nameModal) {
+            this.modalFinalMoves.textContent = this.moves;
+            this.modalFinalTime.textContent = finalTime;
+            this.nameModal.style.display = 'flex';
+        }
+    }
+
+    saveScore(name, moves, time, difficulty, region) {
+        const newScore = { name, moves, time, difficulty, region };
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+        highScores.push(newScore);
+        highScores.sort((a, b) => a.moves - b.moves || a.time.localeCompare(b.time));
+        highScores.splice(10);
+
+        localStorage.setItem('highScores', JSON.stringify(highScores));
     }
 
     // Reset game state variables and UI elements
@@ -255,6 +302,9 @@ class FlagsOfAfrica {
         this.winMessage.classList.remove('show'); // Hide win message
         if (this.confettiElement) {
             this.confettiElement.classList.remove('show');
+        }
+        if (this.nameModal) {
+            this.nameModal.style.display = 'none';
         }
     }
 
