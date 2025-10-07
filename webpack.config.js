@@ -3,7 +3,7 @@
 
 const path = require('path');
 
-const commonOutputPath = path.resolve(__dirname, 'js');
+const commonOutputPath = path.resolve(__dirname, 'dist');
 
 const createConfig = (entryFile, outputFilename, name) => ({
     mode: 'production',

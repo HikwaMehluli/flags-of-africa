@@ -81,7 +81,7 @@ class FlagsOfAfrica {
     // Get list of flags based on selected region
     async getAfricanFlags() {
         try {
-            const response = await fetch('js/flags.json');
+            const response = await fetch('dist/flags.json');
             const flags = await response.json();
 
             if (this.region === 'africa') {
