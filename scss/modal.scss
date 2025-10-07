@@ -25,19 +25,20 @@
 }
 
 .close-modal {
+    background: none;
+    border: none;
     color: var(--secondary-color);
     position: absolute;
     top: 10px;
     right: 20px;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close-modal:hover,
 .close-modal:focus {
-    color: var(--text-color);
-    text-decoration: none;
-    cursor: pointer;
+    opacity: .7;
 }
 
 .modal-content h2 {

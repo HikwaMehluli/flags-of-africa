@@ -47,7 +47,7 @@
     <header>
         <div class="menu-icon" id="menu-icon"><span class="menu-text">MENU</span></div>
         <div class="theme-switcher" title="Toggle Theme">
-            <button id="theme-toggle">
+            <button id="theme-toggle" aria-label="Toggle theme">
                 <span class="icon"></span>
             </button>
         </div>
@@ -65,22 +65,6 @@
     </div>
 
     <div class="overlay" id="overlay"></div>
-
-    <div class="confetti">
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-        <div class="confetti-piece"></div>
-    </div>
 
     <main class="game-container">
         <section class="game-header">
@@ -149,7 +133,7 @@
     <!-- Modal for entering player name -->
     <div id="name-modal" class="modal-overlay" style="display: none;">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <button class="close-modal" aria-label="Close modal">&times;</button>
             <h2>Congratulations!</h2>
             <p>You won in <span id="modal-final-moves">0</span> moves and <span id="modal-final-time">00:00</span>!</p>
             <p>Enter your name to save your score:</p>
