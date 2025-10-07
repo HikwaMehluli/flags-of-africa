@@ -26,7 +26,7 @@ class FlagsOfAfrica {
 
         // Game Settings (from selectors)
         this.difficulty = 'easy';
-        this.region = 'entire'; // Default region - "southern", 'north", "east", "west", "central", "entire = (all Africa)"
+        this.region = 'africa'; // Default region - "southern", 'north", "east", "west", "central", "africa = (all Africa)"
 
         // Setup game
         this.initializeSelectors();
@@ -84,7 +84,7 @@ class FlagsOfAfrica {
             const response = await fetch('js/flags.json');
             const flags = await response.json();
 
-            if (this.region === 'entire') {
+            if (this.region === 'africa') {
                 return [...flags.north, ...flags.southern, ...flags.east, ...flags.west, ...flags.central];
             }
             return flags[this.region] || flags.southern;
