@@ -36,13 +36,22 @@
 
 /* Selectors */
 .selectors-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
 
     .selector-group {
         display: grid;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            width: calc(50% - 10px); // Two items side-by-side with a 20px gap
+        }
+
+        &:last-child {
+            width: 100%; // Last item takes full width
+        }
 
         .selector-title {
             font-weight: bold;
