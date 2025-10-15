@@ -158,24 +158,11 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
             allOption.textContent = `All of ${continentName}`;
             regionSelect.appendChild(allOption);
 
-            // Specific region names for Africa for better readability
-            const africaRegionMap = {
-                'north': 'North Africa',
-                'southern': 'Southern Africa',
-                'east': 'East Africa',
-                'west': 'West Africa',
-                'central': 'Central Africa'
-            };
-
             // Populate selector with regions from the fetched data
             for (const regionKey in flagsData) {
                 const option = document.createElement('option');
                 option.value = regionKey;
-                // Use mapped name for Africa, otherwise use the key
-                let regionText = (this.continent === 'africa')
-                    ? africaRegionMap[regionKey] || regionKey
-                    : regionKey;
-                option.textContent = regionText;
+                option.textContent = regionKey;
                 regionSelect.appendChild(option);
             }
 

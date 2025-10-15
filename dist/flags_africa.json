@@ -1,5 +1,5 @@
 {
-    "north": [
+    "North Africa": [
         { "country": "Algeria", "code": "dz", "flag": "<span class=\"fi fi-dz\"></span>" },
         { "country": "Egypt", "code": "eg", "flag": "<span class=\"fi fi-eg\"></span>" },
         { "country": "Libya", "code": "ly", "flag": "<span class=\"fi fi-ly\"></span>" },
@@ -8,7 +8,7 @@
         { "country": "Western Sahara", "code": "eh", "flag": "<span class=\"fi fi-eh\"></span>" },
         { "country": "Tunisia", "code": "tn", "flag": "<span class=\"fi fi-tn\"></span>" }
     ],
-    "southern": [
+    "Southern Africa": [
         { "country": "Angola", "code": "ao", "flag": "<span class=\"fi fi-ao\"></span>" },
         { "country": "Botswana", "code": "bw", "flag": "<span class=\"fi fi-bw\"></span>" },
         { "country": "Eswatini", "code": "sz", "flag": "<span class=\"fi fi-sz\"></span>" },
@@ -20,7 +20,7 @@
         { "country": "Zambia", "code": "zm", "flag": "<span class=\"fi fi-zm\"></span>" },
         { "country": "Zimbabwe", "flag": "<span class=\"fi fi-zw\"></span>" }
     ],
-    "east": [
+    "East Afria": [
         { "country": "Comoros", "code": "km", "flag": "<span class=\"fi fi-km\"></span>" },
         { "country": "Djibouti", "code": "dj", "flag": "<span class=\"fi fi-dj\"></span>" },
         { "country": "Eritrea", "code": "er", "flag": "<span class=\"fi fi-er\"></span>" },
@@ -36,7 +36,7 @@
         { "country": "Tanzania", "code": "tz", "flag": "<span class=\"fi fi-tz\"></span>" },
         { "country": "Uganda", "code": "ug", "flag": "<span class=\"fi fi-ug\"></span>" }
     ],
-    "west": [
+    "West Africa": [
         { "country": "Benin", "code": "bj", "flag": "<span class=\"fi fi-bj\"></span>" },
         { "country": "Burkina Faso", "code": "bf", "flag": "<span class=\"fi fi-bf\"></span>" },
         { "country": "Cabo Verde", "code": "cv", "flag": "<span class=\"fi fi-cv\"></span>" },
@@ -53,7 +53,7 @@
         { "country": "Sierra Leone", "code": "sl", "flag": "<span class=\"fi fi-sl\"></span>" },
         { "country": "Togo", "flag": "<span class=\"fi fi-tg\"></span>" }
     ],
-    "central": [
+    "Central Africa": [
         { "country": "Burundi", "code": "bi", "flag": "<span class=\"fi fi-bi\"></span>" },
         { "country": "Cameroon", "code": "cm", "flag": "<span class=\"fi fi-cm\"></span>" },
         { "country": "Central African Republic", "code": "cf", "flag": "<span class=\"fi fi-cf\"></span>" },
