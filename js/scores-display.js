@@ -1,48 +1,76 @@
+/**
+ * This script runs on the scores page when the DOM is fully loaded.
+ * It retrieves high scores from local storage and displays them in a list.
+ * If no scores are found, it shows a message indicating that.
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    // Get references to the high scores list and the container for the "no scores" message
     const highScoresList = document.getElementById('high-scores-list');
     const noScoresContainer = document.getElementById('no-scores-container');
 
-    // This script should only run on the scores page, so check if the necessary elements exist
-    if (highScoresList && noScoresContainer) {
-        // Retrieve high scores from local storage; if none exist, use an empty array
-        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    // Ensure the necessary elements are on the page before proceeding
+    if (!highScoresList || !noScoresContainer) {
+        console.error("Required elements for scores display not found.");
+        return;
+    }
 
-        // Check if there are any scores to display
-        if (highScores.length > 0) {
-            // Create a map to convert region codes (e.g., 'southern') to more readable names (e.g., 'Southern Africa')
-            const regionMap = {
-                africa: 'Entire Africa',
-                southern: 'Southern Africa',
-                north: 'North Africa',
-                east: 'East Africa',
-                west: 'West Africa',
-                central: 'Central Africa'
-            };
+    // Retrieve high scores from local storage, defaulting to an empty array
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
-            // Make the high scores list visible and hide the "no scores" message
-            highScoresList.style.display = 'block';
-            noScoresContainer.style.display = 'none';
-
-            // Generate and inject the HTML for the list of high scores
-            highScoresList.innerHTML = highScores.map(score => {
-                // Find the full region name from the map, defaulting to the original code if not found
-                const regionName = regionMap[score.region] || score.region;
-                // Create the HTML list item for the current score
-                return `<li>
-                    <span class="player-name">${score.name}</span>
-                    <span class="score-details">
-                        ${score.moves} moves - ${score.time}
-                    </span>
-                    <span class="game-level">
-                        ${score.difficulty} - ${regionName}
-                    </span>
-                </li>`;
-            }).join('');
-        } else {
-            // If there are no scores, hide the list and show the "no scores" message
-            highScoresList.style.display = 'none';
-            noScoresContainer.style.display = 'block';
-        }
+    if (highScores.length > 0) {
+        // If scores exist, display the list and hide the 'no scores' message
+        highScoresList.style.display = 'block';
+        noScoresContainer.style.display = 'none';
+        // Populate the list with score items
+        highScoresList.innerHTML = highScores.map(createScoreListItem).join('');
+    } else {
+        // If no scores exist, hide the list and show the 'no scores' message
+        highScoresList.style.display = 'none';
+        noScoresContainer.style.display = 'block';
     }
 });
+
+/**
+ * Creates an HTML list item string for a given score object.
+ * @param {object} score - The score object.
+ * @param {string} score.name - The player's name.
+ * @param {number} score.moves - The number of moves taken.
+ * @param {string} score.time - The time taken.
+ * @param {string} score.difficulty - The game difficulty.
+ * @param {string} score.region - The game region (e.g., "africa - southern").
+ * @returns {string} The HTML string for the list item.
+ */
+function createScoreListItem(score) {
+    // Format the region text for display
+    const regionText = formatRegion(score.region);
+
+    return `
+        <li>
+            <span class="player-name">${score.name}</span>
+            <span class="score-details">
+                ${score.moves} moves - ${score.time}
+            </span>
+            <span class="game-level">
+                ${score.difficulty} - ${regionText}
+            </span>
+        </li>
+    `;
+}
+
+/**
+ * Formats the region string for better readability.
+ * Example: "africa - southern" becomes "Africa - Southern"
+ * Example: "europe - all" becomes "Europe - All"
+ * @param {string} regionString - The region string from the score object.
+ * @returns {string} The formatted region string.
+ */
+function formatRegion(regionString) {
+    if (typeof regionString !== 'string' || !regionString) {
+        return 'Unknown Region';
+    }
+
+    // Split the string by the delimiter and capitalize each part
+    return regionString
+        .split(' - ')
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' - ');
+}

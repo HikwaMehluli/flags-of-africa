@@ -1,12 +1,12 @@
-# 🌍 Flags of Africa Memory Game 🌍
+# 🌍 Flags of the World Memory Game 🌍
 
-![Flags of Africa Memory Game Screenshot](./img/seo-image.jpg)
+![Flags of the World Memory Game Screenshot](./img/seo-image.jpg)
 
-## An exciting and educational journey into the heart of Africa!
+## An exciting and educational journey across the globe!
 
-Have you ever noticed the lack of fun, interactive, and educational content about Africa? This project was born out of a desire to change that! We believe in making learning about Africa's rich and diverse cultures an engaging experience for everyone.
+This project was born out of a desire to make learning about the world's diverse cultures an engaging experience for everyone.
 
-This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of the 55 African Nations. Get ready to challenge your memory, learn some geography, and have a blast doing it!
+This memory game is more than just a game; it's an adventure that will test your knowledge and teach you about the beautiful flags of countries and regions from different continents. Get ready to challenge your memory, learn some geography, and have a blast doing it!
 
 ## ✨ Features & Tech Stack
 
@@ -45,26 +45,23 @@ npm run css-build
 npm run js-build
 ```
 
-## 🗺️ Countries Included
+## 🗺️ Regions Included
 
-The countries and their flags are based on the official [Regions of the African Union](https://au.int/en/member_states/countryprofiles2). The African Union (AU) is made up of 55 Member States which represent all the countries on the African continent. AU Member States are divided into five geographic regions. which were defined by the Organization of African Unity (OAU) in 1976 (CM/Res.464QCXVI).
+The game includes flags from various continents, including Africa and Europe.
 
-The OAU is the predecessor of the AU. The OAU was a continental body established in 1963 to promote unity and solidarity among African states and to coordinate cooperation for a better life for the people of Africa. The OAU was later replaced by the African Union (AU) in 2002. 
+### Africa
 
-### North Africa
-- Egypt (eg), Libya (ly), Tunisia (tn), Algeria (dz), Morocco (ma), Sudan (sd)
+The countries and their flags are based on the official [Regions of the African Union](https://au.int/en/member_states/countryprofiles2). The African Union (AU) is made up of 55 Member States which represent all the countries on the African continent. AU Member States are divided into five geographic regions.
 
-### Southern Africa
-- South Africa (za), Zimbabwe (zw), Botswana (bw), Namibia (na), Zambia (zm), Lesotho (ls), Eswatini (sz), Malawi (mw)
+-   **North Africa:** Egypt (eg), Libya (ly), Tunisia (tn), Algeria (dz), Morocco (ma), Sudan (sd)
+-   **Southern Africa:** South Africa (za), Zimbabwe (zw), Botswana (bw), Namibia (na), Zambia (zm), Lesotho (ls), Eswatini (sz), Malawi (mw)
+-   **East Africa:** Kenya (ke), Ethiopia (et), Tanzania (tz), Uganda (ug), Rwanda (rw), Burundi (bi), Somalia (so), Djibouti (dj)
+-   **West Africa:** Nigeria (ng), Ghana (gh), Senegal (sn), Mali (ml), Burkina Faso (bf), Ivory Coast (ci), Guinea (gn), Sierra Leone (sl), Liberia (lr), Togo (tg), Benin (bj)
+-   **Central Africa:** Cameroon (cm), Chad (td), Central African Republic (cf), Gabon (ga), Equatorial Guinea (gq), Republic of Congo (cg), Democratic Republic of Congo (cd), Angola (ao)
 
-### East Africa
-- Kenya (ke), Ethiopia (et), Tanzania (tz), Uganda (ug), Rwanda (rw), Burundi (bi), Somalia (so), Djibouti (dj)
+### Europe
 
-### West Africa
-- Nigeria (ng), Ghana (gh), Senegal (sn), Mali (ml), Burkina Faso (bf), Ivory Coast (ci), Guinea (gn), Sierra Leone (sl), Liberia (lr), Togo (tg), Benin (bj)
-
-### Central Africa
-- Cameroon (cm), Chad (td), Central African Republic (cf), Gabon (ga), Equatorial Guinea (gq), Republic of Congo (cg), Democratic Republic of Congo (cd), Angola (ao)
+Includes countries and regions across the European continent.
 
 ---
 
