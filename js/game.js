@@ -135,7 +135,7 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
 
         // Map continents to their flag data files
         const flagFiles = {
-            africa: 'dist/flags.json',
+            africa: 'dist/flags_africa.json',
             europe: 'dist/flags_europe.json'
         };
         const fileName = flagFiles[this.continent];
@@ -384,7 +384,7 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
         const finalTime = this.timeElement.textContent;
         if (this.nameModal) {
             this.modalFinalMoves.textContent = this.moves;
-            thisLAGs.modalFinalTime.textContent = finalTime;
+            this.modalFinalTime.textContent = finalTime;
             this.nameModal.style.display = 'block';
         }
     }
