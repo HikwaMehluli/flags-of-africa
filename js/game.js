@@ -1,4 +1,4 @@
-class FlagsofWorld { // Renamed from FlagsOfAfrica
+class FlagsofWorld {
     constructor() {
         // --- Game State ---
         // Stores the cards for the current game
@@ -136,7 +136,9 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
         // Map continents to their flag data files
         const flagFiles = {
             africa: 'dist/flags_africa.json',
-            europe: 'dist/flags_europe.json'
+            europe: 'dist/flags_europe.json',
+            asia: 'dist/flags_asia.json',
+            america: 'dist/flags_america.json'
         };
         const fileName = flagFiles[this.continent];
         if (!fileName) {
@@ -182,7 +184,9 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
     async getFlags() {
         const flagFiles = {
             africa: 'dist/flags_africa.json',
-            europe: 'dist/flags_europe.json'
+            europe: 'dist/flags_europe.json',
+            asia: 'dist/flags_asia.json',
+            america: 'dist/flags_america.json'
         };
         const fileName = flagFiles[this.continent];
         if (!fileName) return [];
@@ -430,5 +434,5 @@ class FlagsofWorld { // Renamed from FlagsOfAfrica
 
 // Initialize the game once the DOM is fully loaded
 window.addEventListener('DOMContentLoaded', () => {
-    new FlagsofWorld(); // Renamed from FlagsOfAfrica
+    new FlagsofWorld();
 });
